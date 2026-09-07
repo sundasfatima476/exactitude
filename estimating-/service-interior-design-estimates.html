@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Commercial Estimating by Exactitude Estimation">
-  <title>Commercial Estimating | Exactitude Estimation</title>
+  <meta name="description" content="Interior Design Estimates by Exactitude Estimation">
+  <title>Interior Design Estimates | Exactitude Estimation</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="assets/exactitude-mark.jpeg" type="image/jpeg">
@@ -13,7 +13,8 @@
 
   <nav class="navbar page-navbar">
     <a class="logo-block" href="index.html" aria-label="Exactitude Estimation home"><img src="assets/exactitude-mark.jpeg" alt="Exactitude Estimation LLC."><span class="company-name"><strong>EXACTITUDE</strong><small>ESTIMATION LLC.</small></span></a>
-    <ul class="nav-links">
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">HOME</a></li>
       <li class="active"><a href="services.html">SERVICES</a></li>
       <li><a href="about.html">ABOUT US</a></li>
@@ -26,22 +27,22 @@
   <section class="page-hero">
     <div class="page-hero-content">
       <div class="eyebrow">OUR SERVICES</div>
-      <h1>Commercial Estimating</h1>
-      <div class="page-breadcrumbs"><a href="index.html">HOME</a> &nbsp;/&nbsp; <a href="services.html">SERVICES</a> &nbsp;/&nbsp; COMMERCIAL ESTIMATING</div>
+      <h1>Interior Design Estimates</h1>
+      <div class="page-breadcrumbs"><a href="index.html">HOME</a> &nbsp;/&nbsp; <a href="services.html">SERVICES</a> &nbsp;/&nbsp; INTERIOR DESIGN ESTIMATES</div>
     </div>
   </section>
   <section class="page-content">
     <div class="service-detail">
       <article class="service-detail-copy dark-card">
-        <div class="eyebrow"><i class="fa-solid fa-city"></i> EXACTITUDE ESTIMATION</div>
-        <h2>Commercial Estimating built around your project.</h2>
-        <p>Comprehensive estimating support for commercial scopes, tenant improvements, and larger bids, backed by detailed quantity analysis.</p>
+        <div class="eyebrow"><i class="fa-solid fa-money-bill-transfer"></i> EXACTITUDE ESTIMATION</div>
+        <h2>Interior Design Estimates built around your project.</h2>
+        <p>Accurate interior estimating that gives designers and contractors a clearer picture of finishes, fixtures, materials, and costs.</p>
         <p>Our team reviews your plans carefully, organizes the scope clearly, and delivers practical information that helps you prepare a confident bid.</p>
         <a href="contact.html" class="cta-btn">REQUEST A QUOTE <i class="fa-solid fa-arrow-right"></i></a>
       </article>
       <aside class="service-detail-sidebar dark-card">
         <h3>What is included</h3>
-        <ul><li><i class="fa-solid fa-check"></i>Commercial & tenant improvement scopes</li><li><i class="fa-solid fa-check"></i>Large-scale quantity takeoffs</li><li><i class="fa-solid fa-check"></i>Clear, organized estimate reports</li></ul>
+        <ul><li><i class="fa-solid fa-check"></i>Finish and fixture quantities</li><li><i class="fa-solid fa-check"></i>Interior scope pricing</li><li><i class="fa-solid fa-check"></i>Clear cost summaries</li></ul>
       </aside>
     </div>
   </section>
@@ -88,7 +89,7 @@
             <ul class="footer-contact">
                 <li><i class="fa-solid fa-location-dot"></i>30 N Gould ST STE R, Sheridan, WY 82801, USA</li>
                 <li><i class="fa-solid fa-location-dot"></i>55 University Avenue, Toronto, ON M5J 2H7, Canada</li>
-                <li><i class="fa-solid fa-phone"></i> <a href="tel:+1 (647)427-4133">+1 (647)427-4133</a></li>
+                <li><i class="fa-solid fa-phone"></i> <a href="tel:+16474274133">+1 (647) 427-4133</a></li>
                 <li><i class="fa-solid fa-envelope"></i> <a href="mailto:info@exactitudeestimation.com">info@exactitudeestimation.com</a></li>
             </ul>
             <div class="newsletter-form">
@@ -100,10 +101,11 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 Exactitude Estimation. All Rights Reserved.</p>
+        <p>&copy; 2026 Exactitude Estimation LLC. All Rights Reserved.</p>
         <p>Terms &amp; Conditions &nbsp;|&nbsp; Privacy Policy</p>
     </div>
 
   </footer>
+<script src="js/mobile-nav.js"></script>
 </body>
 </html>
