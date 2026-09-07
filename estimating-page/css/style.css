@@ -3040,9 +3040,3 @@ img,.hero-image,.services-cards .service-box,.inner-service-card .service-image,
 .page-hero::after{
   border-bottom-color:#0f172a !important;
 }
-
-@media (max-width:900px){
-  .navbar{
-    overflow:visible;
-  }
-}
