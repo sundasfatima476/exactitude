@@ -1661,63 +1661,91 @@
 
 .software-section{
   width:100%;
-  background:var(--charcoal);
-  padding:55px 5%;
-  border-top:1px solid rgba(184,192,196,.1);
-  border-bottom:1px solid rgba(184,192,196,.1);
+  background:#080808;
+  padding:6px 36px 48px;
+  border:0;
 }
 
 .software-inner{
   max-width:1300px;
   margin:0 auto;
   text-align:center;
+  position:relative;
+  min-height:278px;
+  padding:37px 92px 52px;
+  background:#fff;
+  border:1px solid #e5e5e5;
+  border-radius:0 0 17px 17px;
+  box-shadow:0 4px 14px rgba(0,0,0,.14);
 }
 
 .software-title{
-  color:var(--gray);
-  font-size:13px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  font-weight:700;
-  margin-bottom:34px;
+  color:#070707;
+  font-size:clamp(30px,3.1vw,48px);
+  line-height:1.08;
+  letter-spacing:-1.2px;
+  text-transform:none;
+  font-weight:800;
+  margin:0 0 58px;
 }
 
 .software-row{
   display:flex;
   align-items:center;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:50px;
+  justify-content:space-between;
+  gap:32px;
 }
 
 .software-item{
   display:flex;
   align-items:center;
-  gap:12px;
-  color:var(--gray);
-  opacity:.7;
+  justify-content:center;
+  gap:7px;
+  color:#090909;
+  min-width:175px;
+  opacity:1;
   transition:all .3s ease;
 }
 
 .software-item:hover{
-  color:var(--white);
-  opacity:1;
+  color:#000;
   transform:translateY(-2px);
 }
 
-.software-item i{
-  color:var(--cyan);
-  font-size:24px;
-}
-
-.software-item span{
-  font-size:15px;
-  font-weight:700;
-  letter-spacing:.3px;
-}
+.software-wordmark{ display:inline-flex; align-items:center; color:currentColor; font-size:23px; font-weight:800; letter-spacing:-1.4px; line-height:.8; white-space:nowrap; }
+.software-wordmark small{ display:block; margin-top:4px; color:currentColor; font-size:6px; font-weight:700; letter-spacing:.15px; line-height:1; }
+.software-wordmark sup{ font-size:7px; margin-left:2px; align-self:flex-start; }
+.software-ost .software-wordmark{ display:block; text-align:left; color:#111; font-size:13px; letter-spacing:-.75px; line-height:.85; }
+.software-ost .software-wordmark small{ font-size:8px; letter-spacing:0; }
+.software-bluebeam .software-wordmark{ display:block; text-align:left; font-size:21px; letter-spacing:-1.25px; }
+.software-bluebeam .software-wordmark small{ font-size:5px; letter-spacing:.2px; text-align:center; }
+.software-kubla .software-wordmark{ font-family:Georgia,serif; font-size:43px; font-weight:700; letter-spacing:-4px; }
+.kubla-cube{ font-family:Arial,sans-serif; font-size:19px; align-self:flex-start; letter-spacing:0; }
+.software-planswift .software-wordmark{ display:block; text-align:left; font-size:22px; font-weight:500; letter-spacing:-1.5px; }
+.software-planswift .software-wordmark small{ font-size:6px; text-align:right; }
+.software-mark{ display:inline-block; flex:0 0 auto; }
+.mark-target{ width:21px; height:21px; border:3px solid #111; border-radius:50%; position:relative; }
+.mark-target::before,.mark-target::after{ content:""; position:absolute; background:#111; }
+.mark-target::before{ width:3px; height:27px; left:6px; top:-6px; }
+.mark-target::after{ width:27px; height:3px; left:-6px; top:6px; }
+.mark-bluebeam{ width:25px; height:29px; border:5px solid #111; position:relative; }
+.mark-bluebeam::after{ content:""; position:absolute; width:10px; height:5px; background:#fff; right:-1px; bottom:5px; }
+.mark-planswift{ width:37px; height:22px; clip-path:polygon(0 50%,43% 0,72% 0,43% 100%); background:#111; position:relative; }
+.mark-planswift::after{ content:""; position:absolute; inset:4px 0 4px 11px; background:#fff; clip-path:polygon(0 50%,100% 0,100% 100%); }
+.software-nav{ position:absolute; top:122px; width:36px; height:36px; border:0; border-radius:50%; background:#111; color:#fff; display:grid; place-items:center; cursor:pointer; font-size:12px; }
+.software-nav:hover{ background:#444; }
+.software-nav-prev{ left:14px; }
+.software-nav-next{ right:14px; }
 
 @media(max-width:650px){
-  .software-row{ gap:28px 34px; }
+  .software-section{ padding:0 14px 28px; }
+  .software-inner{ min-height:0; padding:30px 45px 36px; }
+  .software-title{ margin-bottom:36px; }
+  .software-row{ flex-wrap:wrap; gap:28px 20px; justify-content:center; }
+  .software-item{ min-width:132px; }
+  .software-nav{ top:104px; width:30px; height:30px; }
+  .software-nav-prev{ left:7px; }
+  .software-nav-next{ right:7px; }
 }
 
 
@@ -2849,4 +2877,166 @@ body::selection { color:var(--navy); background:var(--cyan); }
 @media (max-width:600px){
   .quote-form-row{ grid-template-columns:1fr; }
   .contact-quote-col{ padding:26px; }
+}
+
+/* =========================================================
+   MONOCHROME THEME
+   ========================================================= */
+:root {
+  --cyan:#ffffff;
+  --black:#000000;
+  --charcoal:#000000;
+  --navy:#000000;
+  --navy-2:#111111;
+  --white:#ffffff;
+  --gray:#bdbdbd;
+}
+
+body { background:#000; color:#fff; }
+body::selection { background:#fff; color:#000; }
+
+/* Remove the former blue accent from every page. */
+.hero::before { background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.77) 43%,rgba(0,0,0,.28) 77%,rgba(0,0,0,.35) 100%); }
+.navbar,.site-header,.services-showcase,.testimonial-section,.site-footer,.footer { background:#000 !important; }
+.navbar,.nav-toggle,.navbar .nav-links,.page-navbar .nav-links { border-color:rgba(255,255,255,.25); }
+.nav-links li.active,.nav-links li:hover,.nav-links li a:hover,.main-nav a:hover,.main-nav a.active { color:#fff; }
+.hero .eyebrow { color:#fff; }
+.section-label,.section-label span { color:#111; }
+.read-more-btn,.quote-btn,.cta-btn,.primary-btn { background:#000; color:#fff; border-color:#000; }
+.read-more-btn:hover,.quote-btn:hover,.cta-btn:hover,.primary-btn:hover,.cta-btn-outline:hover { background:#fff; color:#000; border-color:#000; box-shadow:none; }
+.cta-btn-outline { border-color:#fff; color:#fff; }
+
+/* Light content areas use white surfaces with near-black type. */
+.about-section,.faq-section,.inner-page,.intro-section,.services-section { background:#fff; color:#111; }
+.about-content h2,.about-content .estimate-item strong,.page-heading h2,.about-page-copy h2,.service-detail-copy h2,.value-item strong,.inner-service-card h3,.contact-details h3,.contact-form h3,.service-detail-sidebar h3,.contact-method strong,.inner-page .faq-question { color:#111; }
+.about-intro,.about-right > p,.estimate-item span,.page-heading p,.about-page-copy p,.service-detail-copy p,.value-item span,.inner-service-card p,.contact-details p,.contact-method,.service-detail-sidebar li,.inner-page .faq-answer p,.intro-copy,.card-content p,.contact-info-item span { color:#4a4a4a; }
+.dark-card,.inner-services-grid .inner-service-card,.service-detail-copy,.service-detail-sidebar,.contact-details,.contact-form,.contact-quote-col,.service-card,.faq-item,.inner-page .faq-item { background:#fff; border-color:rgba(0,0,0,.18); box-shadow:0 10px 26px rgba(0,0,0,.08); }
+.faq-item.open { border-color:#000; box-shadow:0 10px 28px rgba(0,0,0,.10); }
+.info-icon { background:#eee; color:#000; }
+.contact-form input,.contact-form textarea,.quote-form input,.quote-form textarea { border-color:rgba(0,0,0,.35); color:#000; background:#fff; }
+.contact-form input:focus,.contact-form textarea:focus,.quote-form input:focus,.quote-form textarea:focus { border-color:#000; box-shadow:0 0 0 3px rgba(0,0,0,.12); }
+
+/* Keep original photography and logo colors. */
+img,.hero-image,.services-cards .service-box,.inner-service-card .service-image,.service-image,.page-hero { filter:none; }
+.services-cards .service-box,.services-cards .service-box.active,.services-cards .service-box:hover { background-color:rgba(0,0,0,.58); }
+.services-cards .service-box::before { background:rgba(0,0,0,.5); }
+.services-cards .service-box i,.number,.card-link { color:#fff; }
+
+/* Legacy accent borders and labels are rendered neutral. */
+.image-badge,.estimate-icon,.bidding-card,.testimonial-card,.faq-item,.footer-socials a { border-color:rgba(255,255,255,.3); }
+.stats-band { border-color:rgba(0,0,0,.25); }
+.image-badge i,.estimate-item:hover .estimate-icon { background:#fff; color:#000; }
+.image-badge strong,.section-label span,.bidding-card i,.stats-band strong,.faq-question i { color:#000; }
+.quote-cta,.bidding-section { background:#000; }
+
+/* Takeoff software panel — colors matched to the supplied reference. */
+.software-section { background:#111520; }
+.software-inner { background:#fff; border-color:#ededed; }
+.software-title { color:#10131e; }
+.software-nav { background:#777; color:#fff; }
+.software-nav-next { background:#c5c5c5; }
+.software-nav:hover { background:#555; }
+
+.software-ost .software-wordmark { color:#287353; }
+.software-ost .software-wordmark small { color:#8c8c8c; }
+.software-ost .mark-target { border-color:#8b8b8b; }
+.software-ost .mark-target::before { background:#287353; }
+.software-ost .mark-target::after { background:#8b8b8b; }
+
+.software-bluebeam .software-wordmark { color:#111; }
+.software-bluebeam .software-wordmark small { color:#333; }
+.software-bluebeam .mark-bluebeam { border-color:#1389cc; }
+.software-bluebeam .mark-bluebeam::after { background:#fff; }
+
+.software-kubla .software-wordmark { color:#090909; }
+.software-planswift .software-wordmark { color:#258ac2; }
+.software-planswift .software-wordmark small { color:#777; }
+.software-planswift .mark-planswift { background:#777; }
+.software-planswift .mark-planswift::after { background:#258ac2; }
+
+/* Site palette: black, white, and dark blue. */
+:root { --cyan:#fff; --black:#000; --charcoal:#111827; --navy:#0f172a; --navy-2:#111827; --white:#fff; --gray:#cbd5e1; }
+.navbar,.site-header,.services-showcase,.testimonial-section,.site-footer,.footer { background:#0f172a !important; }
+.quote-cta,.bidding-section { background:#0f172a; }
+.hero { background:#000; }
+.read-more-btn,.quote-btn,.cta-btn,.primary-btn { background:#0f172a; color:#fff; border-color:#0f172a; }
+.read-more-btn:hover,.quote-btn:hover,.cta-btn:hover,.primary-btn:hover { background:#fff; color:#0f172a; border-color:#0f172a; }
+
+/* Residential and Commercial icons remain visible without hover. */
+.estimate-icon { background:#0f172a; border-color:#0f172a; color:#fff; }
+.estimate-item:hover .estimate-icon { background:#000; color:#fff; }
+
+/* Services heading and action treatment. */
+.services-small-title,.services-description { color:#fff; }
+.services-more-btn { background:#0f172a; color:#fff; }
+.services-more-btn:hover { background:#fff; color:#0f172a; }
+
+/* Bidding-card arrows: white at rest, dark blue on hover. */
+.bidding-arrow { background:#fff; color:#0f172a; }
+.bidding-card:hover .bidding-arrow { background:#0f172a; color:#fff; }
+
+/* Statistics strip based on the supplied reference, in dark blue. */
+.stats-section { background:#000; padding:48px 5%; }
+.stats-band {
+  max-width:1280px;
+  min-height:230px;
+  padding:0 38px;
+  background:linear-gradient(rgba(15,23,42,.92),rgba(15,23,42,.92)),url("../assets/hero-section.jpg") center/cover;
+  border:0;
+  border-radius:10px;
+  box-shadow:none;
+  align-items:center;
+}
+.stat-box {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  padding:28px 18px;
+  border:0;
+  text-align:left;
+}
+.stat-icon {
+  width:74px;
+  height:74px;
+  flex:0 0 74px;
+  margin:0;
+  border-radius:6px;
+  background:#fff;
+  color:#0f172a;
+  font-size:29px;
+}
+.stat-number { color:#fff; font-size:48px; letter-spacing:-1.5px; }
+.stat-number span { font-size:36px; }
+.stat-label { color:#fff; font-size:15px; font-weight:600; letter-spacing:0; text-transform:none; margin-top:6px; }
+.stat-box:hover .stat-icon { transform:none; }
+@media(max-width:900px){
+  .stats-band { padding:18px; }
+  .stat-box { border:0; padding:24px 12px; }
+}
+@media(max-width:560px){
+  .stats-band { grid-template-columns:1fr; }
+  .stat-box { justify-content:flex-start; padding-left:28px; }
+}
+
+/* White type on the marked dark-blue and black surfaces. */
+.testimonial-section .section-label,
+.testimonial-section .section-label span,
+.services-showcase .services-small-title,
+.services-showcase .services-description,
+.quote-cta .quote-label,
+.quote-cta .quote-btn,
+.quote-cta .quote-btn i,
+.services-more-btn,
+.services-more-btn i,
+.image-badge strong,
+.image-badge span { color:#fff; }
+.image-badge { background:#000; }
+.quote-cta .quote-btn:hover { color:#0f172a; }
+
+.tri-up{ border-bottom-color:#0f172a !important; }
+
+.tri-up,
+.page-hero::after{
+  border-bottom-color:#0f172a !important;
 }
