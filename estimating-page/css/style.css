@@ -4489,3 +4489,10 @@ img,
 .page-hero::after {
   border-bottom-color: #0f172a !important;
 }
+
+.tri-down,
+.tri-up,
+.page-hero::before,
+.page-hero::after {
+  display: none !important;
+}
