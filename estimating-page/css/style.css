@@ -3864,7 +3864,7 @@ body::selection {
   gap: 16px;
 }
 
-.info-icon {
+/* .info-icon {
   flex-shrink: 0;
   width: 52px;
   height: 52px;
@@ -3875,7 +3875,7 @@ body::selection {
   border-radius: 4px;
   color: var(--navy);
   font-size: 18px;
-}
+} */
 
 .info-icon svg {
   width: 22px;
@@ -4125,10 +4125,10 @@ body::selection {
   box-shadow: 0 10px 28px rgba(0, 0, 0, .10);
 }
 
-.info-icon {
+/* .info-icon {
   background: #eee;
   color: #000;
-}
+} */
 
 .contact-form input,
 .contact-form textarea,
@@ -4495,4 +4495,117 @@ img,
 .page-hero::before,
 .page-hero::after {
   display: none !important;
+}
+
+/* =========================================================
+   FINAL UI REFINEMENTS
+   ========================================================= */
+
+/* Tighter navbar logo + company-name spacing */
+.navbar:has(.logo-block img) .logo-block {
+  min-width: 300px;
+  padding: 5px 18px;
+  gap: 6px;
+}
+
+.navbar .logo-block img,
+.page-navbar .logo-block img {
+  width: 60px;
+  height: 60px;
+}
+
+.company-name {
+  gap: 2px;
+}
+
+.company-name strong {
+  letter-spacing: 1px;
+}
+
+.company-name small {
+  letter-spacing: 1.5px;
+}
+
+/* Tighter navigation spacing */
+.nav-links {
+  margin-right: 28px;
+  gap: clamp(14px, 2vw, 28px);
+}
+
+/* Section labels: slightly larger and bolder */
+.section-label {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-label span {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-right: 6px;
+}
+
+/* Contact page: keep its hero photography clean and avoid oversized/cropped
+   decorative imagery being mistaken for branding. */
+.contact-page .contact-map,
+.contact-page .contact-map iframe {
+  border-radius: 8px;
+}
+
+/* Contact page image elements, if present, should render as clean visuals. */
+.contact-page img {
+  object-fit: cover;
+}
+
+/* Final refinements: stronger section labels and cleaner navbar branding */
+.section-label,
+.section-label span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.section-label span {
+  letter-spacing: 2px;
+}
+
+.navbar:has(.logo-block img) .logo-block {
+  min-width: 290px;
+  padding: 4px 16px;
+  gap: 7px;
+}
+
+.navbar .logo-block img,
+.page-navbar .logo-block img {
+  width: 58px;
+  height: 58px;
+}
+
+.company-name {
+  gap: 2px;
+}
+
+.page-navbar .logo-block .company-name strong {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.05;
+}
+
+.page-navbar .logo-block .company-name small {
+  color: var(--cyan);
+  font-size: 9px;
+  line-height: 1.05;
+  letter-spacing: 1.4px;
+}
+
+/* Contact page logo: keep the mark crisp and visually aligned with the brand text. */
+.contact-page .page-navbar .logo-block img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.contact-page .page-navbar .logo-block {
+  gap: 7px;
 }
