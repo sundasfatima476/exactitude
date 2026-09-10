@@ -4614,3 +4614,37 @@ img,
 .contact-page .page-navbar .logo-block {
   gap: 7px;
 }
+
+/* =========================================================
+   MOBILE NAVBAR BRANDING FIX
+   Keep the logo + company name left-aligned (not centered)
+   and on the same line as the hamburger button.
+   ========================================================= */
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .navbar:has(.logo-block img) .logo-block,
+  .page-navbar:has(.logo-block img) .logo-block {
+    min-width: 0;
+    justify-content: flex-start;
+    padding: 4px 8px;
+    gap: 8px;
+  }
+
+  .navbar .logo-block img,
+  .page-navbar .logo-block img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .company-name strong {
+    font-size: 13px;
+  }
+
+  .company-name small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
