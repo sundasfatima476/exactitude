@@ -3810,8 +3810,20 @@ body::selection {
   .navbar .nav-links li,
   .page-navbar .nav-links li {
     width: 100%;
-    padding: 16px 24px;
+    padding: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .navbar .nav-links li a,
+  .page-navbar .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 16px 24px;
+  }
+
+  .navbar .nav-links li.active,
+  .page-navbar .nav-links li.active {
+    padding: 16px 24px;
   }
 }
 
