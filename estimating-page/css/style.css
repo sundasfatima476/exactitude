@@ -3770,6 +3770,11 @@ body::selection {
 }
 
 @media (max-width:900px) {
+  .navbar,
+  .page-navbar {
+    overflow: visible;
+  }
+
   .nav-toggle {
     display: flex;
     order: 2;
