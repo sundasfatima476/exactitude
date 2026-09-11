@@ -2414,18 +2414,16 @@ footer.site-footer {
 
 .company-name strong {
   color: var(--white);
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 900;
   letter-spacing: 1.2px;
-  line-height: 1.05;
 }
 
 .company-name small {
   color: var(--cyan);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 1.4px;
-  line-height: 1.05;
+  letter-spacing: 2px;
 }
 
 .page-navbar .quote-btn {
@@ -4604,6 +4602,31 @@ img,
   gap: 2px;
 }
 
+.page-navbar .logo-block .company-name strong {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.05;
+}
+
+.page-navbar .logo-block .company-name small {
+  color: var(--cyan);
+  font-size: 9px;
+  line-height: 1.05;
+  letter-spacing: 1.4px;
+}
+
+/* Contact page logo: keep the mark crisp and visually aligned with the brand text. */
+.contact-page .page-navbar .logo-block img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.contact-page .page-navbar .logo-block {
+  gap: 7px;
+}
+
 /* =========================================================
    MOBILE NAVBAR BRANDING FIX
    Keep the logo + company name left-aligned (not centered)
@@ -4619,7 +4642,7 @@ img,
     min-width: 0;
     justify-content: flex-start;
     padding: 4px 8px;
-    gap: 8px;
+    gap: 4px;
   }
 
   .navbar .logo-block img,
