@@ -4615,18 +4615,6 @@ img,
   letter-spacing: 1.4px;
 }
 
-/* Contact page logo: keep the mark crisp and visually aligned with the brand text. */
-.contact-page .page-navbar .logo-block img {
-  width: 56px;
-  height: 56px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.contact-page .page-navbar .logo-block {
-  gap: 7px;
-}
-
 /* =========================================================
    MOBILE NAVBAR BRANDING FIX
    Keep the logo + company name left-aligned (not centered)
