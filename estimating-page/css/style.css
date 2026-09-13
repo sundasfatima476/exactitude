@@ -3656,6 +3656,10 @@ body::selection {
   background-image: url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=85&w=800&auto=format&fit=crop");
 }
 
+.services-cards .service-box:nth-child(6) {
+  background-image: url("https://images.unsplash.com/photo-1542621334-a254cf47733d?q=85&w=800&auto=format&fit=crop");
+}
+
 .services-cards .service-box.active,
 .services-cards .service-box:hover {
   background-color: rgba(7, 21, 27, .4);
@@ -4663,7 +4667,7 @@ img,
 .inner-service-card:hover i,.inner-service-card:hover h3,.inner-service-card:hover p{color:#00E5FF!important}
 .inner-service-card i,.inner-service-card h3,.inner-service-card p{transition:color .3s ease}
 .inner-service-card:hover .service-image{transform:scale(1.05)}
-.service-stamping .service-image{background-image:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=85&w=900&auto=format&fit=crop")}
+.service-stamping .service-image{background-image:url("https://images.unsplash.com/photo-1542621334-a254cf47733d?q=85&w=900&auto=format&fit=crop")}
 @media (min-width:901px){.inner-services-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .contact-page .info-icon{flex:0 0 52px;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:#eef4f5;border:1px solid rgba(15,23,42,.1);border-radius:12px;color:#0f172a!important;font-size:19px;box-shadow:0 8px 18px rgba(15,23,42,.07);transition:transform .25s ease,background .25s ease,color .25s ease}
 .contact-page .info-icon i{color:#0f172a!important}
